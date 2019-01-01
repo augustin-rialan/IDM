@@ -1,13 +1,13 @@
 Manifest-Version: 1.0
-Automatic-Module-Name: qcm.qcm.xtext.ui
+Automatic-Module-Name: insa.qcm.xtext.ui
 Bundle-ManifestVersion: 2
-Bundle-Name: qcm.qcm.xtext.ui
+Bundle-Name: insa.qcm.xtext.ui
 Bundle-Vendor: My Company
 Bundle-Version: 1.0.0.qualifier
-Bundle-SymbolicName: qcm.qcm.xtext.ui; singleton:=true
+Bundle-SymbolicName: insa.qcm.xtext.ui; singleton:=true
 Bundle-ActivationPolicy: lazy
-Require-Bundle: qcm.qcm.xtext,
- qcm.qcm.xtext.ide,
+Require-Bundle: insa.qcm.xtext,
+ insa.qcm.xtext.ide,
  qcm,
  org.eclipse.xtext.ui,
  org.eclipse.xtext.ui.shared,

@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
-Automatic-Module-Name: qcm.qcm.xtext
+Automatic-Module-Name: insa.qcm.xtext
 Bundle-ManifestVersion: 2
-Bundle-Name: qcm.qcm.xtext
+Bundle-Name: insa.qcm.xtext
 Bundle-Vendor: My Company
 Bundle-Version: 1.0.0.qualifier
-Bundle-SymbolicName: qcm.qcm.xtext; singleton:=true
+Bundle-SymbolicName: insa.qcm.xtext; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: qcm,
  org.eclipse.xtext,

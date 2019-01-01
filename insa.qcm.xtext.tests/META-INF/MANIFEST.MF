@@ -1,15 +1,14 @@
 Manifest-Version: 1.0
-Automatic-Module-Name: qcm.qcm.xtext.ui.tests
+Automatic-Module-Name: insa.qcm.xtext.tests
 Bundle-ManifestVersion: 2
-Bundle-Name: qcm.qcm.xtext.ui.tests
+Bundle-Name: insa.qcm.xtext.tests
 Bundle-Vendor: My Company
 Bundle-Version: 1.0.0.qualifier
-Bundle-SymbolicName: qcm.qcm.xtext.ui.tests; singleton:=true
+Bundle-SymbolicName: insa.qcm.xtext.tests; singleton:=true
 Bundle-ActivationPolicy: lazy
-Require-Bundle: qcm.qcm.xtext.ui,
+Require-Bundle: insa.qcm.xtext,
  qcm,
  org.junit.jupiter.api;bundle-version="[5.0.0,6.0.0)",
  org.eclipse.xtext.testing,
- org.eclipse.xtext.xbase.testing,
- org.eclipse.xtext.xbase.junit
+ org.eclipse.xtext.xbase.testing
 Bundle-RequiredExecutionEnvironment: JavaSE-11
