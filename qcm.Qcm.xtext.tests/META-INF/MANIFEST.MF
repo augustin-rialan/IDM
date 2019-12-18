@@ -1,12 +1,12 @@
 Manifest-Version: 1.0
-Automatic-Module-Name: qcm.Qcm.xtext.tests
+Automatic-Module-Name: qcm.qcm.xtext.tests
 Bundle-ManifestVersion: 2
-Bundle-Name: qcm.Qcm.xtext.tests
+Bundle-Name: qcm.qcm.xtext.tests
 Bundle-Vendor: My Company
 Bundle-Version: 1.0.0.qualifier
-Bundle-SymbolicName: qcm.Qcm.xtext.tests; singleton:=true
+Bundle-SymbolicName: qcm.qcm.xtext.tests; singleton:=true
 Bundle-ActivationPolicy: lazy
-Require-Bundle: qcm.Qcm.xtext,
+Require-Bundle: qcm.qcm.xtext,
  qcm,
  org.junit.jupiter.api;bundle-version="[5.0.0,6.0.0)",
  org.eclipse.xtext.testing,

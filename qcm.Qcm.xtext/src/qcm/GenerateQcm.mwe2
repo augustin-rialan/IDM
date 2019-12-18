@@ -10,7 +10,7 @@ Workflow {
 	component = XtextGenerator {
 		configuration = {
 			project = StandardProjectConfig {
-				baseName = "qcm.Qcm.xtext"
+				baseName = "qcm.qcm.xtext"
 				rootPath = rootPath
 				runtimeTest = {
 					enabled = true
@@ -31,7 +31,7 @@ Workflow {
 		}
 		language = StandardLanguage {
 			name = "qcm.Qcm"
-			fileExtensions = "mydsl"
+			fileExtensions = "qcm"
 			referencedResource = "platform:/resource/qcm/model/qcm.genmodel"
 			
 			fragment = ecore2xtext.Ecore2XtextValueConverterServiceFragment2 auto-inject {}
