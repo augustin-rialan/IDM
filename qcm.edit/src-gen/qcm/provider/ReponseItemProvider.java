@@ -54,6 +54,7 @@ public class ReponseItemProvider extends ItemProviderAdapter implements IEditing
 			super.getPropertyDescriptors(object);
 
 			addValuePropertyDescriptor(object);
+			addDataPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -71,7 +72,22 @@ public class ReponseItemProvider extends ItemProviderAdapter implements IEditing
 						getString("_UI_PropertyDescriptor_description", "_UI_Reponse_value_feature",
 								"_UI_Reponse_type"),
 						QcmPackage.Literals.REPONSE__VALUE, true, false, false,
-						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Data feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDataPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Reponse_data_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Reponse_data_feature", "_UI_Reponse_type"),
+						QcmPackage.Literals.REPONSE__DATA, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -103,8 +119,10 @@ public class ReponseItemProvider extends ItemProviderAdapter implements IEditing
 	 */
 	@Override
 	public String getText(Object object) {
-		Reponse reponse = (Reponse) object;
-		return getString("_UI_Reponse_type") + " " + reponse.isValue();
+		Boolean labelValue = ((Reponse) object).getValue();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ? getString("_UI_Reponse_type")
+				: getString("_UI_Reponse_type") + " " + label;
 	}
 
 	/**
@@ -120,6 +138,7 @@ public class ReponseItemProvider extends ItemProviderAdapter implements IEditing
 
 		switch (notification.getFeatureID(Reponse.class)) {
 		case QcmPackage.REPONSE__VALUE:
+		case QcmPackage.REPONSE__DATA:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

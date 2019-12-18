@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: qcm.Qcm.xtext.ide
+Bundle-ManifestVersion: 2
+Bundle-Name: qcm.Qcm.xtext.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: qcm.Qcm.xtext.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: qcm.Qcm.xtext,
+ qcm,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide
+Bundle-RequiredExecutionEnvironment: JavaSE-11

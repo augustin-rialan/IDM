@@ -113,13 +113,22 @@ public interface QcmPackage extends EPackage {
 	int DOMAINE__QUESTION = 0;
 
 	/**
+	 * The feature id for the '<em><b>Nom</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAINE__NOM = 1;
+
+	/**
 	 * The number of structural features of the '<em>Domaine</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAINE_FEATURE_COUNT = 1;
+	int DOMAINE_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Domaine</em>' class.
@@ -150,13 +159,22 @@ public interface QcmPackage extends EPackage {
 	int QUESTION__REPONSE = 0;
 
 	/**
+	 * The feature id for the '<em><b>Data</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTION__DATA = 1;
+
+	/**
 	 * The number of structural features of the '<em>Question</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTION_FEATURE_COUNT = 1;
+	int QUESTION_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Question</em>' class.
@@ -187,13 +205,22 @@ public interface QcmPackage extends EPackage {
 	int REPONSE__VALUE = 0;
 
 	/**
+	 * The feature id for the '<em><b>Data</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPONSE__DATA = 1;
+
+	/**
 	 * The number of structural features of the '<em>Reponse</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REPONSE_FEATURE_COUNT = 1;
+	int REPONSE_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Reponse</em>' class.
@@ -247,6 +274,17 @@ public interface QcmPackage extends EPackage {
 	EReference getDomaine_Question();
 
 	/**
+	 * Returns the meta object for the attribute '{@link qcm.Domaine#getNom <em>Nom</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nom</em>'.
+	 * @see qcm.Domaine#getNom()
+	 * @see #getDomaine()
+	 * @generated
+	 */
+	EAttribute getDomaine_Nom();
+
+	/**
 	 * Returns the meta object for class '{@link qcm.Question <em>Question</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -268,6 +306,17 @@ public interface QcmPackage extends EPackage {
 	EReference getQuestion_Reponse();
 
 	/**
+	 * Returns the meta object for the attribute '{@link qcm.Question#getData <em>Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Data</em>'.
+	 * @see qcm.Question#getData()
+	 * @see #getQuestion()
+	 * @generated
+	 */
+	EAttribute getQuestion_Data();
+
+	/**
 	 * Returns the meta object for class '{@link qcm.Reponse <em>Reponse</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -278,15 +327,26 @@ public interface QcmPackage extends EPackage {
 	EClass getReponse();
 
 	/**
-	 * Returns the meta object for the attribute '{@link qcm.Reponse#isValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link qcm.Reponse#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see qcm.Reponse#isValue()
+	 * @see qcm.Reponse#getValue()
 	 * @see #getReponse()
 	 * @generated
 	 */
 	EAttribute getReponse_Value();
+
+	/**
+	 * Returns the meta object for the attribute '{@link qcm.Reponse#getData <em>Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Data</em>'.
+	 * @see qcm.Reponse#getData()
+	 * @see #getReponse()
+	 * @generated
+	 */
+	EAttribute getReponse_Data();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -348,6 +408,14 @@ public interface QcmPackage extends EPackage {
 		EReference DOMAINE__QUESTION = eINSTANCE.getDomaine_Question();
 
 		/**
+		 * The meta object literal for the '<em><b>Nom</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DOMAINE__NOM = eINSTANCE.getDomaine_Nom();
+
+		/**
 		 * The meta object literal for the '{@link qcm.impl.QuestionImpl <em>Question</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -366,6 +434,14 @@ public interface QcmPackage extends EPackage {
 		EReference QUESTION__REPONSE = eINSTANCE.getQuestion_Reponse();
 
 		/**
+		 * The meta object literal for the '<em><b>Data</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute QUESTION__DATA = eINSTANCE.getQuestion_Data();
+
+		/**
 		 * The meta object literal for the '{@link qcm.impl.ReponseImpl <em>Reponse</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -382,6 +458,14 @@ public interface QcmPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute REPONSE__VALUE = eINSTANCE.getReponse_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Data</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REPONSE__DATA = eINSTANCE.getReponse_Data();
 
 	}
 

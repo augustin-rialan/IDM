@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link qcm.Question#getReponse <em>Reponse</em>}</li>
+ *   <li>{@link qcm.Question#getData <em>Data</em>}</li>
  * </ul>
  *
  * @see qcm.QcmPackage#getQuestion()
@@ -34,5 +35,27 @@ public interface Question extends EObject {
 	 * @generated
 	 */
 	EList<Reponse> getReponse();
+
+	/**
+	 * Returns the value of the '<em><b>Data</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Data</em>' attribute.
+	 * @see #setData(String)
+	 * @see qcm.QcmPackage#getQuestion_Data()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 * @generated
+	 */
+	String getData();
+
+	/**
+	 * Sets the value of the '{@link qcm.Question#getData <em>Data</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Data</em>' attribute.
+	 * @see #getData()
+	 * @generated
+	 */
+	void setData(String value);
 
 } // Question

@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import qcm.Domaine;
 import qcm.QcmFactory;
 import qcm.QcmPackage;
@@ -100,6 +101,9 @@ public class QcmPackageImpl extends EPackageImpl implements QcmPackage {
 
 		isInited = true;
 
+		// Initialize simple dependencies
+		XMLTypePackage.eINSTANCE.eClass();
+
 		// Create package meta-data objects
 		theQcmPackage.createPackageContents();
 
@@ -155,6 +159,15 @@ public class QcmPackageImpl extends EPackageImpl implements QcmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getDomaine_Nom() {
+		return (EAttribute) domaineEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getQuestion() {
 		return questionEClass;
 	}
@@ -173,6 +186,15 @@ public class QcmPackageImpl extends EPackageImpl implements QcmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getQuestion_Data() {
+		return (EAttribute) questionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getReponse() {
 		return reponseEClass;
 	}
@@ -184,6 +206,15 @@ public class QcmPackageImpl extends EPackageImpl implements QcmPackage {
 	 */
 	public EAttribute getReponse_Value() {
 		return (EAttribute) reponseEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getReponse_Data() {
+		return (EAttribute) reponseEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -220,12 +251,15 @@ public class QcmPackageImpl extends EPackageImpl implements QcmPackage {
 
 		domaineEClass = createEClass(DOMAINE);
 		createEReference(domaineEClass, DOMAINE__QUESTION);
+		createEAttribute(domaineEClass, DOMAINE__NOM);
 
 		questionEClass = createEClass(QUESTION);
 		createEReference(questionEClass, QUESTION__REPONSE);
+		createEAttribute(questionEClass, QUESTION__DATA);
 
 		reponseEClass = createEClass(REPONSE);
 		createEAttribute(reponseEClass, REPONSE__VALUE);
+		createEAttribute(reponseEClass, REPONSE__DATA);
 	}
 
 	/**
@@ -252,6 +286,10 @@ public class QcmPackageImpl extends EPackageImpl implements QcmPackage {
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		XMLTypePackage theXMLTypePackage = (XMLTypePackage) EPackage.Registry.INSTANCE
+				.getEPackage(XMLTypePackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
@@ -268,15 +306,21 @@ public class QcmPackageImpl extends EPackageImpl implements QcmPackage {
 		initEReference(getDomaine_Question(), this.getQuestion(), null, "question", null, 0, -1, Domaine.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDomaine_Nom(), theXMLTypePackage.getString(), "nom", null, 0, 1, Domaine.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(questionEClass, Question.class, "Question", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getQuestion_Reponse(), this.getReponse(), null, "reponse", null, 1, -1, Question.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getQuestion_Data(), theXMLTypePackage.getString(), "data", null, 0, 1, Question.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(reponseEClass, Reponse.class, "Reponse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getReponse_Value(), ecorePackage.getEBoolean(), "value", null, 0, 1, Reponse.class,
+		initEAttribute(getReponse_Value(), theXMLTypePackage.getBooleanObject(), "value", "false", 0, 1, Reponse.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getReponse_Data(), theXMLTypePackage.getString(), "data", null, 0, 1, Reponse.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource

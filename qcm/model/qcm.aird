@@ -49,6 +49,10 @@
         <children xmi:type="notation:Node" xmi:id="_P1lmYCGnEeqRx9SO-7kRpg" type="2003" element="_P1dDgCGnEeqRx9SO-7kRpg">
           <children xmi:type="notation:Node" xmi:id="_P1lmYyGnEeqRx9SO-7kRpg" type="5007"/>
           <children xmi:type="notation:Node" xmi:id="_P1mNcCGnEeqRx9SO-7kRpg" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_TF1u0CGqEeqRx9SO-7kRpg" type="3010" element="_TFqvsCGqEeqRx9SO-7kRpg">
+              <styles xmi:type="notation:FontStyle" xmi:id="_TF1u0SGqEeqRx9SO-7kRpg" fontColor="2697711" fontName=".AppleSystemUIFont" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_TF1u0iGqEeqRx9SO-7kRpg"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_P1mNcSGnEeqRx9SO-7kRpg"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_P1mNciGnEeqRx9SO-7kRpg"/>
           </children>
@@ -58,6 +62,10 @@
         <children xmi:type="notation:Node" xmi:id="_XU7FwCGnEeqRx9SO-7kRpg" type="2003" element="_XUzJ8CGnEeqRx9SO-7kRpg">
           <children xmi:type="notation:Node" xmi:id="_XU7s0CGnEeqRx9SO-7kRpg" type="5007"/>
           <children xmi:type="notation:Node" xmi:id="_XU7s0SGnEeqRx9SO-7kRpg" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_Rq2XgCGqEeqRx9SO-7kRpg" type="3010" element="_RqS94CGqEeqRx9SO-7kRpg">
+              <styles xmi:type="notation:FontStyle" xmi:id="_Rq2XgSGqEeqRx9SO-7kRpg" fontColor="2697711" fontName=".AppleSystemUIFont" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_Rq2XgiGqEeqRx9SO-7kRpg"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_XU7s0iGnEeqRx9SO-7kRpg"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_XU7s0yGnEeqRx9SO-7kRpg"/>
           </children>
@@ -70,6 +78,10 @@
             <children xmi:type="notation:Node" xmi:id="_ovxzECGnEeqRx9SO-7kRpg" type="3010" element="_ovgGQCGnEeqRx9SO-7kRpg">
               <styles xmi:type="notation:FontStyle" xmi:id="_ovyaICGnEeqRx9SO-7kRpg" fontColor="2697711" fontName=".AppleSystemUIFont" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_ovyaISGnEeqRx9SO-7kRpg"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_SiHWsCGqEeqRx9SO-7kRpg" type="3010" element="_Sh5UQCGqEeqRx9SO-7kRpg">
+              <styles xmi:type="notation:FontStyle" xmi:id="_SiHWsSGqEeqRx9SO-7kRpg" fontColor="2697711" fontName=".AppleSystemUIFont" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_SiHWsiGqEeqRx9SO-7kRpg"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_bhw5oSGnEeqRx9SO-7kRpg"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_bhw5oiGnEeqRx9SO-7kRpg"/>
@@ -145,10 +157,18 @@
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_P1eRoCGnEeqRx9SO-7kRpg" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_l0ipoCGqEeqRx9SO-7kRpg" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_TFqvsCGqEeqRx9SO-7kRpg" name="nom : String" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="qcm.ecore#//Domaine/nom"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="qcm.ecore#//Domaine/nom"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_l0j3wCGqEeqRx9SO-7kRpg" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_XUzJ8CGnEeqRx9SO-7kRpg" name="Question" tooltipText="" outgoingEdges="_1LdQoCGnEeqRx9SO-7kRpg" incomingEdges="_4B2O8CGnEeqRx9SO-7kRpg" width="12" height="10">
       <target xmi:type="ecore:EClass" href="qcm.ecore#//Question"/>
@@ -156,10 +176,18 @@
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_XU0YECGnEeqRx9SO-7kRpg" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_pxXrkCGqEeqRx9SO-7kRpg" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_RqS94CGqEeqRx9SO-7kRpg" name="data : String" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="qcm.ecore#//Question/data"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="qcm.ecore#//Question/data"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_pxY5sCGqEeqRx9SO-7kRpg" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_bho90CGnEeqRx9SO-7kRpg" name="Reponse" tooltipText="" incomingEdges="_1LdQoCGnEeqRx9SO-7kRpg" width="12" height="10">
       <target xmi:type="ecore:EClass" href="qcm.ecore#//Reponse"/>
@@ -167,14 +195,22 @@
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_vxiloCGnEeqRx9SO-7kRpg" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_sbSUICGqEeqRx9SO-7kRpg" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_ovgGQCGnEeqRx9SO-7kRpg" name="value : EBoolean = false" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_ovgGQCGnEeqRx9SO-7kRpg" name="value : BooleanObject = false" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="qcm.ecore#//Reponse/value"/>
         <semanticElements xmi:type="ecore:EAttribute" href="qcm.ecore#//Reponse/value"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_vxjzwCGnEeqRx9SO-7kRpg" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_Sh5UQCGqEeqRx9SO-7kRpg" name="data : String" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="qcm.ecore#//Reponse/data"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="qcm.ecore#//Reponse/data"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_sbTiQCGqEeqRx9SO-7kRpg" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>

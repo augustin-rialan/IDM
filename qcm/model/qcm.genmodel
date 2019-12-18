@@ -13,12 +13,15 @@
     </genClasses>
     <genClasses ecoreClass="qcm.ecore#//Domaine">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference qcm.ecore#//Domaine/question"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qcm.ecore#//Domaine/nom"/>
     </genClasses>
     <genClasses ecoreClass="qcm.ecore#//Question">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference qcm.ecore#//Question/reponse"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qcm.ecore#//Question/data"/>
     </genClasses>
     <genClasses ecoreClass="qcm.ecore#//Reponse">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qcm.ecore#//Reponse/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qcm.ecore#//Reponse/data"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

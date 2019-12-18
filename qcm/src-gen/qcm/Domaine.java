@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link qcm.Domaine#getQuestion <em>Question</em>}</li>
+ *   <li>{@link qcm.Domaine#getNom <em>Nom</em>}</li>
  * </ul>
  *
  * @see qcm.QcmPackage#getDomaine()
@@ -34,5 +35,27 @@ public interface Domaine extends EObject {
 	 * @generated
 	 */
 	EList<Question> getQuestion();
+
+	/**
+	 * Returns the value of the '<em><b>Nom</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Nom</em>' attribute.
+	 * @see #setNom(String)
+	 * @see qcm.QcmPackage#getDomaine_Nom()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 * @generated
+	 */
+	String getNom();
+
+	/**
+	 * Sets the value of the '{@link qcm.Domaine#getNom <em>Nom</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Nom</em>' attribute.
+	 * @see #getNom()
+	 * @generated
+	 */
+	void setNom(String value);
 
 } // Domaine

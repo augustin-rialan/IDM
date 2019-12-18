@@ -4,6 +4,7 @@ package qcm.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -11,6 +12,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -29,6 +31,7 @@ import qcm.Reponse;
  * </p>
  * <ul>
  *   <li>{@link qcm.impl.QuestionImpl#getReponse <em>Reponse</em>}</li>
+ *   <li>{@link qcm.impl.QuestionImpl#getData <em>Data</em>}</li>
  * </ul>
  *
  * @generated
@@ -43,6 +46,25 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 	 * @ordered
 	 */
 	protected EList<Reponse> reponse;
+
+	/**
+	 * The default value of the '{@link #getData() <em>Data</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getData()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DATA_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getData() <em>Data</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getData()
+	 * @generated
+	 * @ordered
+	 */
+	protected String data = DATA_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -80,6 +102,27 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getData() {
+		return data;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setData(String newData) {
+		String oldData = data;
+		data = newData;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, QcmPackage.QUESTION__DATA, oldData, data));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -99,6 +142,8 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 		switch (featureID) {
 		case QcmPackage.QUESTION__REPONSE:
 			return getReponse();
+		case QcmPackage.QUESTION__DATA:
+			return getData();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -116,6 +161,9 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 			getReponse().clear();
 			getReponse().addAll((Collection<? extends Reponse>) newValue);
 			return;
+		case QcmPackage.QUESTION__DATA:
+			setData((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -131,6 +179,9 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 		case QcmPackage.QUESTION__REPONSE:
 			getReponse().clear();
 			return;
+		case QcmPackage.QUESTION__DATA:
+			setData(DATA_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -145,8 +196,27 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 		switch (featureID) {
 		case QcmPackage.QUESTION__REPONSE:
 			return reponse != null && !reponse.isEmpty();
+		case QcmPackage.QUESTION__DATA:
+			return DATA_EDEFAULT == null ? data != null : !DATA_EDEFAULT.equals(data);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (data: ");
+		result.append(data);
+		result.append(')');
+		return result.toString();
 	}
 
 } //QuestionImpl
