@@ -4,6 +4,7 @@ package qcm.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -11,45 +12,67 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import qcm.Domaine;
-import qcm.QCM;
+import qcm.Qcm;
 import qcm.QcmPackage;
+import qcm.Question;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>QCM</b></em>'.
+ * An implementation of the model object '<em><b>Qcm</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link qcm.impl.QCMImpl#getDomaine <em>Domaine</em>}</li>
+ *   <li>{@link qcm.impl.QcmImpl#getDomaine <em>Domaine</em>}</li>
+ *   <li>{@link qcm.impl.QcmImpl#getQuestion <em>Question</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class QCMImpl extends MinimalEObjectImpl.Container implements QCM {
+public class QcmImpl extends MinimalEObjectImpl.Container implements Qcm {
 	/**
-	 * The cached value of the '{@link #getDomaine() <em>Domaine</em>}' containment reference list.
+	 * The default value of the '{@link #getDomaine() <em>Domaine</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDomaine()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Domaine> domaine;
+	protected static final String DOMAINE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDomaine() <em>Domaine</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDomaine()
+	 * @generated
+	 * @ordered
+	 */
+	protected String domaine = DOMAINE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getQuestion() <em>Question</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getQuestion()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Question> question;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected QCMImpl() {
+	protected QcmImpl() {
 		super();
 	}
 
@@ -68,11 +91,32 @@ public class QCMImpl extends MinimalEObjectImpl.Container implements QCM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Domaine> getDomaine() {
-		if (domaine == null) {
-			domaine = new EObjectContainmentEList<Domaine>(Domaine.class, this, QcmPackage.QCM__DOMAINE);
-		}
+	public String getDomaine() {
 		return domaine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDomaine(String newDomaine) {
+		String oldDomaine = domaine;
+		domaine = newDomaine;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, QcmPackage.QCM__DOMAINE, oldDomaine, domaine));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Question> getQuestion() {
+		if (question == null) {
+			question = new EObjectContainmentEList<Question>(Question.class, this, QcmPackage.QCM__QUESTION);
+		}
+		return question;
 	}
 
 	/**
@@ -83,8 +127,8 @@ public class QCMImpl extends MinimalEObjectImpl.Container implements QCM {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case QcmPackage.QCM__DOMAINE:
-			return ((InternalEList<?>) getDomaine()).basicRemove(otherEnd, msgs);
+		case QcmPackage.QCM__QUESTION:
+			return ((InternalEList<?>) getQuestion()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -99,6 +143,8 @@ public class QCMImpl extends MinimalEObjectImpl.Container implements QCM {
 		switch (featureID) {
 		case QcmPackage.QCM__DOMAINE:
 			return getDomaine();
+		case QcmPackage.QCM__QUESTION:
+			return getQuestion();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -113,8 +159,11 @@ public class QCMImpl extends MinimalEObjectImpl.Container implements QCM {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case QcmPackage.QCM__DOMAINE:
-			getDomaine().clear();
-			getDomaine().addAll((Collection<? extends Domaine>) newValue);
+			setDomaine((String) newValue);
+			return;
+		case QcmPackage.QCM__QUESTION:
+			getQuestion().clear();
+			getQuestion().addAll((Collection<? extends Question>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -129,7 +178,10 @@ public class QCMImpl extends MinimalEObjectImpl.Container implements QCM {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case QcmPackage.QCM__DOMAINE:
-			getDomaine().clear();
+			setDomaine(DOMAINE_EDEFAULT);
+			return;
+		case QcmPackage.QCM__QUESTION:
+			getQuestion().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -144,9 +196,28 @@ public class QCMImpl extends MinimalEObjectImpl.Container implements QCM {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case QcmPackage.QCM__DOMAINE:
-			return domaine != null && !domaine.isEmpty();
+			return DOMAINE_EDEFAULT == null ? domaine != null : !DOMAINE_EDEFAULT.equals(domaine);
+		case QcmPackage.QCM__QUESTION:
+			return question != null && !question.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //QCMImpl
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (domaine: ");
+		result.append(domaine);
+		result.append(')');
+		return result.toString();
+	}
+
+} //QcmImpl

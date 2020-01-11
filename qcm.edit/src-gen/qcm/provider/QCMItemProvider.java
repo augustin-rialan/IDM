@@ -12,26 +12,28 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import qcm.QCM;
+import qcm.Qcm;
 import qcm.QcmFactory;
 import qcm.QcmPackage;
 
 /**
- * This is the item provider adapter for a {@link qcm.QCM} object.
+ * This is the item provider adapter for a {@link qcm.Qcm} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class QCMItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+public class QcmItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
 		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -39,7 +41,7 @@ public class QCMItemProvider extends ItemProviderAdapter implements IEditingDoma
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public QCMItemProvider(AdapterFactory adapterFactory) {
+	public QcmItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -54,8 +56,24 @@ public class QCMItemProvider extends ItemProviderAdapter implements IEditingDoma
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addDomainePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Domaine feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDomainePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Qcm_domaine_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Qcm_domaine_feature", "_UI_Qcm_type"),
+						QcmPackage.Literals.QCM__DOMAINE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -70,7 +88,7 @@ public class QCMItemProvider extends ItemProviderAdapter implements IEditingDoma
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(QcmPackage.Literals.QCM__DOMAINE);
+			childrenFeatures.add(QcmPackage.Literals.QCM__QUESTION);
 		}
 		return childrenFeatures;
 	}
@@ -89,14 +107,14 @@ public class QCMItemProvider extends ItemProviderAdapter implements IEditingDoma
 	}
 
 	/**
-	 * This returns QCM.gif.
+	 * This returns Qcm.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/QCM"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Qcm"));
 	}
 
 	/**
@@ -117,7 +135,9 @@ public class QCMItemProvider extends ItemProviderAdapter implements IEditingDoma
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_QCM_type");
+		String label = ((Qcm) object).getDomaine();
+		return label == null || label.length() == 0 ? getString("_UI_Qcm_type")
+				: getString("_UI_Qcm_type") + " " + label;
 	}
 
 	/**
@@ -131,8 +151,11 @@ public class QCMItemProvider extends ItemProviderAdapter implements IEditingDoma
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(QCM.class)) {
+		switch (notification.getFeatureID(Qcm.class)) {
 		case QcmPackage.QCM__DOMAINE:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
+		case QcmPackage.QCM__QUESTION:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -151,7 +174,7 @@ public class QCMItemProvider extends ItemProviderAdapter implements IEditingDoma
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors
-				.add(createChildParameter(QcmPackage.Literals.QCM__DOMAINE, QcmFactory.eINSTANCE.createDomaine()));
+				.add(createChildParameter(QcmPackage.Literals.QCM__QUESTION, QcmFactory.eINSTANCE.createQuestion()));
 	}
 
 	/**

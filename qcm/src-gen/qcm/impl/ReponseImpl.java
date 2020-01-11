@@ -20,33 +20,13 @@ import qcm.Reponse;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link qcm.impl.ReponseImpl#getValue <em>Value</em>}</li>
  *   <li>{@link qcm.impl.ReponseImpl#getData <em>Data</em>}</li>
+ *   <li>{@link qcm.impl.ReponseImpl#isValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ReponseImpl extends MinimalEObjectImpl.Container implements Reponse {
-	/**
-	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getValue()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Boolean VALUE_EDEFAULT = Boolean.FALSE;
-
-	/**
-	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getValue()
-	 * @generated
-	 * @ordered
-	 */
-	protected Boolean value = VALUE_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #getData() <em>Data</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -68,6 +48,26 @@ public class ReponseImpl extends MinimalEObjectImpl.Container implements Reponse
 	protected String data = DATA_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #isValue() <em>Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean VALUE_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isValue() <em>Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean value = VALUE_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -84,27 +84,6 @@ public class ReponseImpl extends MinimalEObjectImpl.Container implements Reponse
 	@Override
 	protected EClass eStaticClass() {
 		return QcmPackage.Literals.REPONSE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Boolean getValue() {
-		return value;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setValue(Boolean newValue) {
-		Boolean oldValue = value;
-		value = newValue;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, QcmPackage.REPONSE__VALUE, oldValue, value));
 	}
 
 	/**
@@ -133,13 +112,34 @@ public class ReponseImpl extends MinimalEObjectImpl.Container implements Reponse
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isValue() {
+		return value;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setValue(boolean newValue) {
+		boolean oldValue = value;
+		value = newValue;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, QcmPackage.REPONSE__VALUE, oldValue, value));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case QcmPackage.REPONSE__VALUE:
-			return getValue();
 		case QcmPackage.REPONSE__DATA:
 			return getData();
+		case QcmPackage.REPONSE__VALUE:
+			return isValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -152,11 +152,11 @@ public class ReponseImpl extends MinimalEObjectImpl.Container implements Reponse
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case QcmPackage.REPONSE__VALUE:
-			setValue((Boolean) newValue);
-			return;
 		case QcmPackage.REPONSE__DATA:
 			setData((String) newValue);
+			return;
+		case QcmPackage.REPONSE__VALUE:
+			setValue((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -170,11 +170,11 @@ public class ReponseImpl extends MinimalEObjectImpl.Container implements Reponse
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case QcmPackage.REPONSE__VALUE:
-			setValue(VALUE_EDEFAULT);
-			return;
 		case QcmPackage.REPONSE__DATA:
 			setData(DATA_EDEFAULT);
+			return;
+		case QcmPackage.REPONSE__VALUE:
+			setValue(VALUE_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -188,10 +188,10 @@ public class ReponseImpl extends MinimalEObjectImpl.Container implements Reponse
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case QcmPackage.REPONSE__VALUE:
-			return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 		case QcmPackage.REPONSE__DATA:
 			return DATA_EDEFAULT == null ? data != null : !DATA_EDEFAULT.equals(data);
+		case QcmPackage.REPONSE__VALUE:
+			return value != VALUE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -207,10 +207,10 @@ public class ReponseImpl extends MinimalEObjectImpl.Container implements Reponse
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (value: ");
-		result.append(value);
-		result.append(", data: ");
+		result.append(" (data: ");
 		result.append(data);
+		result.append(", value: ");
+		result.append(value);
 		result.append(')');
 		return result.toString();
 	}

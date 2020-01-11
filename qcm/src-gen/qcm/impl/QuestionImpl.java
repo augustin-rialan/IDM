@@ -30,13 +30,33 @@ import qcm.Reponse;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link qcm.impl.QuestionImpl#getIntitule <em>Intitule</em>}</li>
  *   <li>{@link qcm.impl.QuestionImpl#getReponse <em>Reponse</em>}</li>
- *   <li>{@link qcm.impl.QuestionImpl#getData <em>Data</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class QuestionImpl extends MinimalEObjectImpl.Container implements Question {
+	/**
+	 * The default value of the '{@link #getIntitule() <em>Intitule</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIntitule()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String INTITULE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getIntitule() <em>Intitule</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIntitule()
+	 * @generated
+	 * @ordered
+	 */
+	protected String intitule = INTITULE_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getReponse() <em>Reponse</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -46,25 +66,6 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 	 * @ordered
 	 */
 	protected EList<Reponse> reponse;
-
-	/**
-	 * The default value of the '{@link #getData() <em>Data</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getData()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String DATA_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getData() <em>Data</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getData()
-	 * @generated
-	 * @ordered
-	 */
-	protected String data = DATA_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -90,32 +91,33 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getIntitule() {
+		return intitule;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIntitule(String newIntitule) {
+		String oldIntitule = intitule;
+		intitule = newIntitule;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, QcmPackage.QUESTION__INTITULE, oldIntitule,
+					intitule));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<Reponse> getReponse() {
 		if (reponse == null) {
 			reponse = new EObjectContainmentEList<Reponse>(Reponse.class, this, QcmPackage.QUESTION__REPONSE);
 		}
 		return reponse;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getData() {
-		return data;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setData(String newData) {
-		String oldData = data;
-		data = newData;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, QcmPackage.QUESTION__DATA, oldData, data));
 	}
 
 	/**
@@ -140,10 +142,10 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+		case QcmPackage.QUESTION__INTITULE:
+			return getIntitule();
 		case QcmPackage.QUESTION__REPONSE:
 			return getReponse();
-		case QcmPackage.QUESTION__DATA:
-			return getData();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -157,12 +159,12 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+		case QcmPackage.QUESTION__INTITULE:
+			setIntitule((String) newValue);
+			return;
 		case QcmPackage.QUESTION__REPONSE:
 			getReponse().clear();
 			getReponse().addAll((Collection<? extends Reponse>) newValue);
-			return;
-		case QcmPackage.QUESTION__DATA:
-			setData((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -176,11 +178,11 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+		case QcmPackage.QUESTION__INTITULE:
+			setIntitule(INTITULE_EDEFAULT);
+			return;
 		case QcmPackage.QUESTION__REPONSE:
 			getReponse().clear();
-			return;
-		case QcmPackage.QUESTION__DATA:
-			setData(DATA_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -194,10 +196,10 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+		case QcmPackage.QUESTION__INTITULE:
+			return INTITULE_EDEFAULT == null ? intitule != null : !INTITULE_EDEFAULT.equals(intitule);
 		case QcmPackage.QUESTION__REPONSE:
 			return reponse != null && !reponse.isEmpty();
-		case QcmPackage.QUESTION__DATA:
-			return DATA_EDEFAULT == null ? data != null : !DATA_EDEFAULT.equals(data);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -213,8 +215,8 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (data: ");
-		result.append(data);
+		result.append(" (intitule: ");
+		result.append(intitule);
 		result.append(')');
 		return result.toString();
 	}

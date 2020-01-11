@@ -15,8 +15,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link qcm.Question#getIntitule <em>Intitule</em>}</li>
  *   <li>{@link qcm.Question#getReponse <em>Reponse</em>}</li>
- *   <li>{@link qcm.Question#getData <em>Data</em>}</li>
  * </ul>
  *
  * @see qcm.QcmPackage#getQuestion()
@@ -24,6 +24,28 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Question extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Intitule</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Intitule</em>' attribute.
+	 * @see #setIntitule(String)
+	 * @see qcm.QcmPackage#getQuestion_Intitule()
+	 * @model
+	 * @generated
+	 */
+	String getIntitule();
+
+	/**
+	 * Sets the value of the '{@link qcm.Question#getIntitule <em>Intitule</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Intitule</em>' attribute.
+	 * @see #getIntitule()
+	 * @generated
+	 */
+	void setIntitule(String value);
+
 	/**
 	 * Returns the value of the '<em><b>Reponse</b></em>' containment reference list.
 	 * The list contents are of type {@link qcm.Reponse}.
@@ -35,27 +57,5 @@ public interface Question extends EObject {
 	 * @generated
 	 */
 	EList<Reponse> getReponse();
-
-	/**
-	 * Returns the value of the '<em><b>Data</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Data</em>' attribute.
-	 * @see #setData(String)
-	 * @see qcm.QcmPackage#getQuestion_Data()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-	 * @generated
-	 */
-	String getData();
-
-	/**
-	 * Sets the value of the '{@link qcm.Question#getData <em>Data</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Data</em>' attribute.
-	 * @see #getData()
-	 * @generated
-	 */
-	void setData(String value);
 
 } // Question

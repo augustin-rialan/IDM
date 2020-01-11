@@ -67,13 +67,8 @@ public class QcmAdapterFactory extends AdapterFactoryImpl {
 	 */
 	protected QcmSwitch<Adapter> modelSwitch = new QcmSwitch<Adapter>() {
 		@Override
-		public Adapter caseQCM(QCM object) {
-			return createQCMAdapter();
-		}
-
-		@Override
-		public Adapter caseDomaine(Domaine object) {
-			return createDomaineAdapter();
+		public Adapter caseQcm(Qcm object) {
+			return createQcmAdapter();
 		}
 
 		@Override
@@ -106,30 +101,16 @@ public class QcmAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link qcm.QCM <em>QCM</em>}'.
+	 * Creates a new adapter for an object of class '{@link qcm.Qcm <em>Qcm</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see qcm.QCM
+	 * @see qcm.Qcm
 	 * @generated
 	 */
-	public Adapter createQCMAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link qcm.Domaine <em>Domaine</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see qcm.Domaine
-	 * @generated
-	 */
-	public Adapter createDomaineAdapter() {
+	public Adapter createQcmAdapter() {
 		return null;
 	}
 

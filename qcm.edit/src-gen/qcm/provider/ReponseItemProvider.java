@@ -53,26 +53,10 @@ public class ReponseItemProvider extends ItemProviderAdapter implements IEditing
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addValuePropertyDescriptor(object);
 			addDataPropertyDescriptor(object);
+			addValuePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Value feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addValuePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Reponse_value_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Reponse_value_feature",
-								"_UI_Reponse_type"),
-						QcmPackage.Literals.REPONSE__VALUE, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -88,6 +72,22 @@ public class ReponseItemProvider extends ItemProviderAdapter implements IEditing
 						getString("_UI_PropertyDescriptor_description", "_UI_Reponse_data_feature", "_UI_Reponse_type"),
 						QcmPackage.Literals.REPONSE__DATA, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Value feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addValuePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Reponse_value_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Reponse_value_feature",
+								"_UI_Reponse_type"),
+						QcmPackage.Literals.REPONSE__VALUE, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -119,8 +119,7 @@ public class ReponseItemProvider extends ItemProviderAdapter implements IEditing
 	 */
 	@Override
 	public String getText(Object object) {
-		Boolean labelValue = ((Reponse) object).getValue();
-		String label = labelValue == null ? null : labelValue.toString();
+		String label = ((Reponse) object).getData();
 		return label == null || label.length() == 0 ? getString("_UI_Reponse_type")
 				: getString("_UI_Reponse_type") + " " + label;
 	}
@@ -137,8 +136,8 @@ public class ReponseItemProvider extends ItemProviderAdapter implements IEditing
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Reponse.class)) {
-		case QcmPackage.REPONSE__VALUE:
 		case QcmPackage.REPONSE__DATA:
+		case QcmPackage.REPONSE__VALUE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

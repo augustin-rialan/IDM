@@ -8,20 +8,17 @@
   <foreignModel>qcm.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Qcm" disposableProviderFactory="true" ecorePackage="qcm.ecore#/">
-    <genClasses ecoreClass="qcm.ecore#//QCM">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference qcm.ecore#//QCM/domaine"/>
-    </genClasses>
-    <genClasses ecoreClass="qcm.ecore#//Domaine">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference qcm.ecore#//Domaine/question"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qcm.ecore#//Domaine/nom"/>
+    <genClasses ecoreClass="qcm.ecore#//Qcm">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qcm.ecore#//Qcm/domaine"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference qcm.ecore#//Qcm/question"/>
     </genClasses>
     <genClasses ecoreClass="qcm.ecore#//Question">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qcm.ecore#//Question/intitule"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference qcm.ecore#//Question/reponse"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qcm.ecore#//Question/data"/>
     </genClasses>
     <genClasses ecoreClass="qcm.ecore#//Reponse">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qcm.ecore#//Reponse/value"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qcm.ecore#//Reponse/data"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute qcm.ecore#//Reponse/value"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

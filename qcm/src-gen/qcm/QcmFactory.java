@@ -22,22 +22,13 @@ public interface QcmFactory extends EFactory {
 	QcmFactory eINSTANCE = qcm.impl.QcmFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>QCM</em>'.
+	 * Returns a new object of class '<em>Qcm</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>QCM</em>'.
+	 * @return a new object of class '<em>Qcm</em>'.
 	 * @generated
 	 */
-	QCM createQCM();
-
-	/**
-	 * Returns a new object of class '<em>Domaine</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Domaine</em>'.
-	 * @generated
-	 */
-	Domaine createDomaine();
+	Qcm createQcm();
 
 	/**
 	 * Returns a new object of class '<em>Question</em>'.

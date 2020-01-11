@@ -67,15 +67,8 @@ public class QcmSwitch<T> extends Switch<T> {
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
 		case QcmPackage.QCM: {
-			QCM qcm = (QCM) theEObject;
-			T result = caseQCM(qcm);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case QcmPackage.DOMAINE: {
-			Domaine domaine = (Domaine) theEObject;
-			T result = caseDomaine(domaine);
+			Qcm qcm = (Qcm) theEObject;
+			T result = caseQcm(qcm);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -100,32 +93,17 @@ public class QcmSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>QCM</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Qcm</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>QCM</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Qcm</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseQCM(QCM object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Domaine</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Domaine</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDomaine(Domaine object) {
+	public T caseQcm(Qcm object) {
 		return null;
 	}
 

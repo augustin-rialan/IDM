@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link qcm.Reponse#getValue <em>Value</em>}</li>
  *   <li>{@link qcm.Reponse#getData <em>Data</em>}</li>
+ *   <li>{@link qcm.Reponse#isValue <em>Value</em>}</li>
  * </ul>
  *
  * @see qcm.QcmPackage#getReponse()
@@ -23,36 +23,13 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Reponse extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Value</b></em>' attribute.
-	 * The default value is <code>"false"</code>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Value</em>' attribute.
-	 * @see #setValue(Boolean)
-	 * @see qcm.QcmPackage#getReponse_Value()
-	 * @model default="false" dataType="org.eclipse.emf.ecore.xml.type.BooleanObject"
-	 * @generated
-	 */
-	Boolean getValue();
-
-	/**
-	 * Sets the value of the '{@link qcm.Reponse#getValue <em>Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Value</em>' attribute.
-	 * @see #getValue()
-	 * @generated
-	 */
-	void setValue(Boolean value);
-
-	/**
 	 * Returns the value of the '<em><b>Data</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Data</em>' attribute.
 	 * @see #setData(String)
 	 * @see qcm.QcmPackage#getReponse_Data()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 * @model
 	 * @generated
 	 */
 	String getData();
@@ -66,5 +43,27 @@ public interface Reponse extends EObject {
 	 * @generated
 	 */
 	void setData(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Value</em>' attribute.
+	 * @see #setValue(boolean)
+	 * @see qcm.QcmPackage#getReponse_Value()
+	 * @model
+	 * @generated
+	 */
+	boolean isValue();
+
+	/**
+	 * Sets the value of the '{@link qcm.Reponse#isValue <em>Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Value</em>' attribute.
+	 * @see #isValue()
+	 * @generated
+	 */
+	void setValue(boolean value);
 
 } // Reponse

@@ -73,49 +73,26 @@ public class QcmItemProviderAdapterFactory extends QcmAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link qcm.QCM} instances.
+	 * This keeps track of the one adapter used for all {@link qcm.Qcm} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected QCMItemProvider qcmItemProvider;
+	protected QcmItemProvider qcmItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link qcm.QCM}.
+	 * This creates an adapter for a {@link qcm.Qcm}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createQCMAdapter() {
+	public Adapter createQcmAdapter() {
 		if (qcmItemProvider == null) {
-			qcmItemProvider = new QCMItemProvider(this);
+			qcmItemProvider = new QcmItemProvider(this);
 		}
 
 		return qcmItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qcm.Domaine} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DomaineItemProvider domaineItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qcm.Domaine}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDomaineAdapter() {
-		if (domaineItemProvider == null) {
-			domaineItemProvider = new DomaineItemProvider(this);
-		}
-
-		return domaineItemProvider;
 	}
 
 	/**
@@ -265,8 +242,6 @@ public class QcmItemProviderAdapterFactory extends QcmAdapterFactory
 	public void dispose() {
 		if (qcmItemProvider != null)
 			qcmItemProvider.dispose();
-		if (domaineItemProvider != null)
-			domaineItemProvider.dispose();
 		if (questionItemProvider != null)
 			questionItemProvider.dispose();
 		if (reponseItemProvider != null)

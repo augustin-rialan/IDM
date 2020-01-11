@@ -56,9 +56,7 @@ public class QcmFactoryImpl extends EFactoryImpl implements QcmFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 		case QcmPackage.QCM:
-			return createQCM();
-		case QcmPackage.DOMAINE:
-			return createDomaine();
+			return createQcm();
 		case QcmPackage.QUESTION:
 			return createQuestion();
 		case QcmPackage.REPONSE:
@@ -73,19 +71,9 @@ public class QcmFactoryImpl extends EFactoryImpl implements QcmFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public QCM createQCM() {
-		QCMImpl qcm = new QCMImpl();
+	public Qcm createQcm() {
+		QcmImpl qcm = new QcmImpl();
 		return qcm;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Domaine createDomaine() {
-		DomaineImpl domaine = new DomaineImpl();
-		return domaine;
 	}
 
 	/**
